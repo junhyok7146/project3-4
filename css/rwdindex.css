@@ -1,144 +1,265 @@
-@media screen and (max-width: 1170px) {
-    .row{
-        max-width: 1170px;
-        margin: 0 auto;
-        padding: 0 10px;
+@media screen and (max-width: 1220px) {
+    .row {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 10px;
     }
+  }
+  
+  @media screen and (max-width: 767px) {
+    #header {
+      background-color: #fff;
+    }
+    #header .row {
+      padding: 0;
+    }
+  
+    #header .row h1 {
+      float: left;
+      padding: 10px 0 10px 50px;
+    }
+  
+    #header .row .menuopen {
+      float: right;
+      display: block;
+      height: 85px;
+      line-height: 85px;
+      font-size: 25px;
+      margin-right: 50px;
+    }
+  
+    #header .row #nav {
+      float: right;
+      width: 100%;
+      display: none;
+    }
+  
+    #header .row #nav ul.depth1 > li {
+      float: none;
+      position: relative;
+      text-align: left;
+      margin-left: 0px;
+    }
+  
+    #header .row #nav ul.depth1 > li > a {
+      font-size: 17px;
+      font-weight: bold;
+      padding: 0px 50px;
+      display: block;
+      color: #333;
+      height: auto;
+      line-height: 50px;
+      border-top: 1px solid rgba(132, 132, 132, 0.15);
+    }
+    #header .row #nav ul.depth1 > li:hover > a {
+      background: #000;
+      color: #fff;
+    }
+    #header .row #nav ul.depth1 > li > a::after {
+      display: block;
+      position: absolute;
+      top: 2px;
+      right: 50px;
+      font-size: 10px;
+      font-family: "FontAwesome";
+      content: "\f107";
+      opacity: 0.3;
+    }
+  
+    #header .row #nav ul.depth1 > li:hover > ul.depth2 {
+      display: block;
+    }
+  
+    #header .row #nav ul.depth2 {
+      display: none;
+      position: static;
+      top: 100%;
+      width: 100%;
+      text-align: left;
+      z-index: 999;
+    }
+  
+    #header .row #nav ul.depth2 > li > a {
+      display: block;
+      padding: 12px 0 12px 50px;
+      font-size: 14px;
+      font-weight: 600;
+      border-bottom: 0px solid rgba(132, 132, 132, 0.15);
+      border-top: 1px solid rgba(132, 132, 132, 0.15);
+      background-color: #fff;
+      color: #333;
+      transition: all 0.3s;
+    }
+  
+    #header .row #nav ul.depth2 > li > a:hover {
+      background-color: #000;
+      color: #fff;
+    }
+    /* ================================================================= */
+    #section .slide .text h2{
+      font-size: 20px;
+      margin: 0 0 25px;
+      transform: translate3d(0, 100%, 0);
+      opacity: 0;
+  }
+  #section .slide .text p{
+    font-size: 13px;
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
 }
-@media screen and (max-width: 768px){
-   
-    #header{
-        background-color: #fff;
-        position: static; 
-        top: 0; 
-        left: 0; 
-        width: 100%;
-        z-index: 99;
-    }
-    #header h1{
-        float: left;
-        padding: 20px 0;
-    }
-    #header .menuopen{
-        display: block;
-        float: right;
-        font-size: 25px;
-        height: 88.3px;
-        line-height: 88.3px;
-    }
-    #header #nav{
-        float: right;
-        display: block;
-        width: 100%;
-    }
-    #header #nav .depth1 > li {
-        float: none;
-        /* font-size: 14px; color: #1f262d; padding: 10px 25px 10px 15px; */
-        font-size: 13px; 
-        color: #000; 
-        font-family: "Noto Sans KR";
-        font-weight: 900;
-        margin-left: 0px;
-        position: relative;
-        border-top: 1px solid #d4d4d4;
-    }
-    #header #nav .depth1 > li>a{
-        height: auto;
-        line-height: 40px;
-        display: block;
-        /*자연스럽게 부모 성질을 가지려면 <a>tag에 block을 거의 필수적으로 적어줘야 함*/
-        position: relative;
-        padding: 0 25px 0 15px;
-        border-top: 1px solid #d4d4d4;
-    }
-    #header #nav .depth1 > li:nth-child(1) > a::after,
-    #header #nav .depth1 > li:nth-child(4) > a::after{
-        display: block;
-        position: absolute;
-        top: 2px;
-        right: 10px;
-        font-family: "FontAwesome";
-        font-size: 10px;
-        content: "\f107"; /*역 슬래시로 바꿔야 함*/
-        opacity: 0.3;
-    }
-    #header #nav .depth1 > li>a:hover{
-        background: rgba(0, 0, 0, 0.03);
-    }
-    #header #nav .depth1 > li:hover .depth2{
-        display: block;
-    }
-    #header #nav .depth2{
-        position: static;
-        top: 100%;
-        left: 0%;
-        width: 100%;
-        background: #333;
-        color: #fff;
-        font-size: 13px;
-        font-family: "Noto Sans KR";
-        font-weight: 300;
-        display: block;
-    
-    }
-    #header #nav .depth2 > li > a{
-        display: block;
-        padding: 7px 15px;
-        background: rgba(0, 0, 0, 0.15);
-    }
-    #header #nav .depth2 > li > a:hover{
-        background-color: rgba(0, 0, 0, 0.5);
-        display: block;
-        padding: 7px 15px;
-    }
-/*==========================슬라이드 구역===================================*/
-    #section .SectionOuter .slide .text p{
-        font-size: 16px;
-        opacity: 0;
-        transform: translate3d(0, 100%, 0);
-        padding: 1px  10px;
-    }
-    #section .slide .text{
-        position: absolute;
-    
-        top: 50%;
-        left: 50%;
-    
-        transform: translate(-50%,-50%);
-    
-        color: #fff;
-    
-        text-align: center;
-    }
-/*===================notice 슬라이드 구역===================================*/
+#section .slideouter .slideinner ul.slick-dots{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  /*음수로 주면 밖으로 빼낼 수 있음*/
+  bottom: 10px;
 }
-@media screen and (max-width:760px) {
-    #section .ourcompany ul li{
-        float: left;
-        width: 100%;
-        padding:0px 15px;
-        margin-bottom: 40px;
+#section .slideouter .plapau{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  color: #fff;
+  margin-left: 60px;
+  font-size: 15px;
+}
+#section .slideouter .slideinner button.slick-arrow{
+  position: absolute;
+  color: #fff;
+  font-size: 40px;
+  top: 30%;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/*============================================================================== */
+    #section .aboutus ul li{
+      float: left;
+      width: 100%;
     }
-    #section .ourcampany ul li img {
-        width:100%;
+    #section .aboutus h2{
+      font-size: 35px;
+      color: #333;
+      padding: 50px 0 20px;
+  }
+    #section .aboutus .slogun{
+      font-size: 14px;
+      color: #333;
+      padding: 0 0 50px;
     }
-/*=======================================================================*/
-    #section .product ul.best li{
-        float: left;
-        width: 100%;
-        padding: 0 5px ;
-        margin-bottom: 40px;
+/* ================================================================= */
+    #section .creative .videobox{
+      float: left;
+      width: 100%;
     }
-/*=======================================================================*/
-    #section .conpaninfo ul li{
-        float: left;
-        width: 50%;
-        color: #fff;
-        padding: 20px 15px;
-        text-align: center;
+    #section .creative .text{
+      float: left;
+      width: auto;
+      padding: 30px 10px;
     }
-/*=============================== footer구역=========================== */
-    #footer span{
-        display: blcok;
+    #section .creative .text h2{
+      font-size: 28px;
+      line-height: 1.2em;
     }
+    #section .creative .text p{
+      font-size: 12px;
+      word-break: keep-all;
+      /*문장을 단어 단위로 끊어주는 코드*/
+      /*문장에 어지간하면 br태그를 사용하지 않아야함*/
+      line-height: 1.5em;
+      padding-right: 100px;
+  }
+  /*===================================================================*/
+  #section .business ul li{
+    float: left;
+    width: 50%;
+    padding: 5px;
+  }
+  #section .business h2{
+    color: #333;
+    font-size: 28px;
+    padding: 10px 0;
+}
+#section .business p{
+    color: #333;
+    font-size: 13px;
+    line-height: 1.5em;
+    margin: 20px 0 80px;
+}
+/*===================================================================*/
+#section .best{
+  background: url(../img/banner04.jpg) center / cover;
+  height: 580px;
+  text-align: center;
+  padding-top: 100px;
+}
+/*===================================================================*/
+#section .contact{
+  margin-top: -300px;
+  padding-bottom: 10px;
+}
+#section .contact .map{
+  float: left;
+  width: 100%;
+  min-height: 450px;
+}
+#section .contact .query{
+  float: left;
+  width: auto;
+  background-color: #fff;
+  height: 450px;
+  padding: 10px;
+}
+#section .contact .query h3{
+  padding-bottom: 30px;
+  font-size: 17px;
+}
+#section .contact .query .greeting{
+  padding-bottom: 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+#section .contact .query .address{
+  padding-bottom: 30px;
+  font-size: 12.5px;
+}
+#section .contact .query .address span{
+  display: block;
+}
+#section .contact .query .btn > a{
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 30px;
+  display: inline-block;
+  margin: 10px 20px 10px 0;
+}
+/*===================================================================*/
+#footer{
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 50px 0 20px;
+}
+#footer .btmmenu .companyinfo{
+  float: left;
+  padding-right: 5px;
+  text-align: center;
+}
+#footer .btmmenu .companyinfo a{
+  color: #555;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 15.5px 0 0;
+  padding: 13px 0;
+  }
+  #footer .btmmenu .sns{
+    margin: 20px 10px 10px 10px;
+    float: none;
+    text-align: center;
+  }
+#footer .btmmenu .sns a{
+    padding: 10px 10px 50px 5px;
+    text-align: center;
+    font-size: 14px;
+    display: inline-block;
+}
 }

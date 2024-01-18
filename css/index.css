@@ -8,6 +8,7 @@
 
     font-family: 'Noto Sans KR', sans-serif;
 }
+
 img{
     max-width:100%;
     vertical-align: middle;
@@ -28,72 +29,72 @@ a{
 ul{
     list-style: none;
 }
+.blind{
+    display: none;
+}
 /*==================================================================================*/
-#header{
+#header {
     background-color: #fff;
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%;
-    z-index: 99;
-}
-#header h1{
+  }
+  
+  #header .row h1 {
     float: left;
-    padding: 20px 0;
-}
-#header #nav{
+    padding: 10px 0;
+  }
+  
+  #header .row .menuopen {
+    display: none;
+  }
+  
+  #header .row #nav {
     float: right;
-}
-#header #nav .depth1 > li{
+  }
+  
+  #header .row #nav ul.depth1 > li {
     float: left;
-    color: #333;
-    font-size: 17px;
-    margin: 0 0 0 0;
-    padding: 0px 30px;
-    font-weight: 900;
     position: relative;
-}
-#header #nav .depth1 > li >a{
+    text-align: center;
+    margin-left: 12px;
+  }
+  
+  #header .row #nav ul.depth1 > li > a {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0px 22px;
     display: block;
     color: #333;
-    height: 105px;
-    line-height: 105px;
-}
-#header #nav .depth1 > li:hover .depth2{
+    height: 85px;
+    line-height: 85px;
+  }
+  
+  #header .row #nav ul.depth1 > li:hover > ul.depth2 {
     display: block;
-}
-#header #nav .depth2{
+  }
+  
+  #header .row #nav ul.depth2 {
+    display: none;
     position: absolute;
     top: 100%;
-    /*depth2를 중간으로보내는 코드*/
-    /*transform - translate (-50%) , margin-left : (width값 나누기2)*/
-    margin-left: -53px;
-    /* transform: translate(-50%); */
-    left: 50%;
-    /* left 값이 0일경우 한쪽으로 취우쳐짐*/
-    width: 106%;
-    /*px이 아닌 %로 상위와 크기를 같게 만들음*/
-    background-color: #fff;
-    color: #666;
-    font-weight: 500;
-    display: none;
+    width: 100%;
+    text-align: left;
+    z-index: 999;
+  }
+  
+  #header .row #nav ul.depth2 > li > a {
+    display: block;
+    padding: 12px 0 12px 22px;
     font-size: 14px;
-}
-#header #nav .depth2 > li > a{
-    display: block;
-    padding: 10px 30px;
-    transition: all 0.2s;
-}
-#header #nav .depth2 > li > a:hover{
-    display: block;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(132, 132, 132, 0.15);
+    background-color: #fff;
+    color: #333;
+    transition: all 0.3s;
+  }
+  
+  #header .row #nav ul.depth2 > li > a:hover {
     background-color: #000;
     color: #fff;
-}
-#header #nav .depth2 > li > a:nth-child(1),
-#header #nav .depth2 > li > a:nth-child(2),
-#header #nav .depth2 > li > a:nth-child(3){
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
+  }
 /*==================================================================================*/
 #section .slide1{
     background: url(../img/main1.jpg) no-repeat center / cover;
@@ -108,7 +109,7 @@ ul{
     background: url(../img/main04.jpg) no-repeat center / cover;
 }
 #section .slide{
-    height: 100vh;
+    height: 40vw;
     position: relative;
     /*slide 가 많으므로 공통되는건 한번에 정리 할 수 있음*/
 }
@@ -123,6 +124,7 @@ ul{
     color: #fff;
 
     text-align: center;
+    word-break: keep-all;
 }
 #section .slide .text h2{
     font-size: 35px;
@@ -214,7 +216,8 @@ ul{
     font-size: 15px;
     color: #333;
     padding: 0 0 50px;
-}#section .aboutus ul{
+}
+#section .aboutus ul{
     overflow: hidden;
     /*없을 시 굉장한 부작용이 일어남*/
 }
@@ -441,6 +444,7 @@ padding: 13px 0;
     float: right;
 }
 #footer .btmmenu .sns a{
+    display: inline-block;
     padding: 10px;
 }
 /*반응형 스타일을 잡아줘야 좁아진 넓이에 따라 무너지는걸 방지할 수 있음*/
