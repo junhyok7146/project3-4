@@ -1,0 +1,144 @@
+@media screen and (max-width: 1170px) {
+    .row{
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+}
+@media screen and (max-width: 768px){
+   
+    #header{
+        background-color: #fff;
+        position: static; 
+        top: 0; 
+        left: 0; 
+        width: 100%;
+        z-index: 99;
+    }
+    #header h1{
+        float: left;
+        padding: 20px 0;
+    }
+    #header .menuopen{
+        display: block;
+        float: right;
+        font-size: 25px;
+        height: 88.3px;
+        line-height: 88.3px;
+    }
+    #header #nav{
+        float: right;
+        display: block;
+        width: 100%;
+    }
+    #header #nav .depth1 > li {
+        float: none;
+        /* font-size: 14px; color: #1f262d; padding: 10px 25px 10px 15px; */
+        font-size: 13px; 
+        color: #000; 
+        font-family: "Noto Sans KR";
+        font-weight: 900;
+        margin-left: 0px;
+        position: relative;
+        border-top: 1px solid #d4d4d4;
+    }
+    #header #nav .depth1 > li>a{
+        height: auto;
+        line-height: 40px;
+        display: block;
+        /*자연스럽게 부모 성질을 가지려면 <a>tag에 block을 거의 필수적으로 적어줘야 함*/
+        position: relative;
+        padding: 0 25px 0 15px;
+        border-top: 1px solid #d4d4d4;
+    }
+    #header #nav .depth1 > li:nth-child(1) > a::after,
+    #header #nav .depth1 > li:nth-child(4) > a::after{
+        display: block;
+        position: absolute;
+        top: 2px;
+        right: 10px;
+        font-family: "FontAwesome";
+        font-size: 10px;
+        content: "\f107"; /*역 슬래시로 바꿔야 함*/
+        opacity: 0.3;
+    }
+    #header #nav .depth1 > li>a:hover{
+        background: rgba(0, 0, 0, 0.03);
+    }
+    #header #nav .depth1 > li:hover .depth2{
+        display: block;
+    }
+    #header #nav .depth2{
+        position: static;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        background: #333;
+        color: #fff;
+        font-size: 13px;
+        font-family: "Noto Sans KR";
+        font-weight: 300;
+        display: block;
+    
+    }
+    #header #nav .depth2 > li > a{
+        display: block;
+        padding: 7px 15px;
+        background: rgba(0, 0, 0, 0.15);
+    }
+    #header #nav .depth2 > li > a:hover{
+        background-color: rgba(0, 0, 0, 0.5);
+        display: block;
+        padding: 7px 15px;
+    }
+/*==========================슬라이드 구역===================================*/
+    #section .SectionOuter .slide .text p{
+        font-size: 16px;
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+        padding: 1px  10px;
+    }
+    #section .slide .text{
+        position: absolute;
+    
+        top: 50%;
+        left: 50%;
+    
+        transform: translate(-50%,-50%);
+    
+        color: #fff;
+    
+        text-align: center;
+    }
+/*===================notice 슬라이드 구역===================================*/
+}
+@media screen and (max-width:760px) {
+    #section .ourcompany ul li{
+        float: left;
+        width: 100%;
+        padding:0px 15px;
+        margin-bottom: 40px;
+    }
+    #section .ourcampany ul li img {
+        width:100%;
+    }
+/*=======================================================================*/
+    #section .product ul.best li{
+        float: left;
+        width: 100%;
+        padding: 0 5px ;
+        margin-bottom: 40px;
+    }
+/*=======================================================================*/
+    #section .conpaninfo ul li{
+        float: left;
+        width: 50%;
+        color: #fff;
+        padding: 20px 15px;
+        text-align: center;
+    }
+/*=============================== footer구역=========================== */
+    #footer span{
+        display: blcok;
+    }
+}
